@@ -1,0 +1,12 @@
+------------------------------------------------------------------
+
+RAIM PREDICTION
+MASKANGLE(degree):5.000000
+RNP4.00: available from 1710170000Z to 1710200000Z
+ENROUT:H117
+ENROUT:H89
+ENROUT:H90
+ENROUT:W146
+ENROUT:W162
+
+

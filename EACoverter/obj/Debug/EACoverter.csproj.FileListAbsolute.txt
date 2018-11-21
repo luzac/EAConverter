@@ -1,0 +1,12 @@
+H:\EAConverter\EACoverter\EACoverter\bin\Debug\EACoverter.exe.config
+H:\EAConverter\EACoverter\EACoverter\bin\Debug\EACoverter.exe
+H:\EAConverter\EACoverter\EACoverter\bin\Debug\EACoverter.pdb
+H:\EAConverter\EACoverter\EACoverter\obj\Debug\EACoverter.exe
+H:\EAConverter\EACoverter\EACoverter\obj\Debug\EACoverter.pdb
+H:\EAConverter\EACoverter\EACoverter\bin\Debug\MigraDoc.DocumentObjectModel.dll
+H:\EAConverter\EACoverter\EACoverter\bin\Debug\MigraDoc.Rendering.dll
+H:\EAConverter\EACoverter\EACoverter\bin\Debug\MigraDoc.RtfRendering.dll
+H:\EAConverter\EACoverter\EACoverter\bin\Debug\PdfSharp.Charting.dll
+H:\EAConverter\EACoverter\EACoverter\bin\Debug\PdfSharp.dll
+H:\EAConverter\EACoverter\EACoverter\bin\Debug\LitJson.dll
+H:\EAConverter\EACoverter\EACoverter\obj\Debug\EACoverter.csproj.CoreCompileInputs.cache
