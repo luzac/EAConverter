@@ -201,7 +201,7 @@ namespace EACoverter {
             if (ResultDirectoryInfo != null && !string.IsNullOrEmpty(targetFileName)) {
                 if (targetType == PredictionType.AIRPORT) {
                     if (!isPDF) {
-                        string targetName = string.Format("{0}\\{1}.txt", ResultDirectoryInfo.FullName, targetFileName);
+                        string targetName = string.Format("{0}\\{1}{2}.txt", ResultDirectoryInfo.FullName, targetFileName,DateTime.Now.ToString("MMdd"));
                         StreamWriter sw = new StreamWriter(targetName);
                         validPreds.ForEach(pred => {
                             pred.Content.ForEach(singleContent => sw.WriteLine(singleContent));
@@ -211,7 +211,7 @@ namespace EACoverter {
                         Console.WriteLine(string.Format("{0}.txt is generated!", targetName));
                     }
                     else {
-                        string targetName = string.Format("{0}\\{1}.pdf", ResultDirectoryInfo.FullName, targetFileName);
+                        string targetName = string.Format("{0}\\{1}{2}.pdf", ResultDirectoryInfo.FullName, targetFileName, DateTime.Now.ToString("MMdd"));
                         TxtToPDFConverter.Convert(validPreds, targetName);
                     }
                 }
@@ -228,7 +228,7 @@ namespace EACoverter {
 
                     if (!isPDF) {
                         var result = TxtToPDFConverter.GenerateBriefContents(false, predicts_EX, predicts_Normal);
-                        string targetName = string.Format("{0}\\{1}.txt", ResultDirectoryInfo.FullName, targetFileName);
+                        string targetName = string.Format("{0}\\{1}{2}.txt", ResultDirectoryInfo.FullName, targetFileName, DateTime.Now.ToString("MMdd"));
                         StreamWriter sw = new StreamWriter(targetName);
                         result.ForEach(line => {
                             sw.WriteLine(line);
@@ -236,8 +236,8 @@ namespace EACoverter {
                         sw.Close();
                         Console.WriteLine(string.Format("{0}.txt is generated!", targetName));
                     }
-                    else {
-                        string targetName = string.Format("{0}\\{1}.pdf", ResultDirectoryInfo.FullName, targetFileName);
+                    else {                        
+                        string targetName = string.Format("{0}\\{1}{2}.pdf", ResultDirectoryInfo.FullName, targetFileName, DateTime.Now.ToString("MMdd"));
                         TxtToPDFConverter.GenerateBriefView(false, predicts_EX, predicts_Normal, targetName);
                     }
                 }

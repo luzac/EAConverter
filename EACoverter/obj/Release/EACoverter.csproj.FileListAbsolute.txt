@@ -10,3 +10,14 @@ H:\EAConverter\EACoverter\EACoverter\obj\Release\EACoverter.exe
 H:\EAConverter\EACoverter\EACoverter\obj\Release\EACoverter.pdb
 H:\EAConverter\EACoverter\EACoverter\bin\Release\LitJson.dll
 H:\EAConverter\EACoverter\EACoverter\obj\Release\EACoverter.csproj.CoreCompileInputs.cache
+H:\EA\EAConverter\EACoverter\bin\Release\EACoverter.exe.config
+H:\EA\EAConverter\EACoverter\obj\Release\EACoverter.exe
+H:\EA\EAConverter\EACoverter\obj\Release\EACoverter.pdb
+H:\EA\EAConverter\EACoverter\bin\Release\EACoverter.exe
+H:\EA\EAConverter\EACoverter\bin\Release\EACoverter.pdb
+H:\EA\EAConverter\EACoverter\bin\Release\LitJson.dll
+H:\EA\EAConverter\EACoverter\bin\Release\MigraDoc.DocumentObjectModel.dll
+H:\EA\EAConverter\EACoverter\bin\Release\MigraDoc.Rendering.dll
+H:\EA\EAConverter\EACoverter\bin\Release\MigraDoc.RtfRendering.dll
+H:\EA\EAConverter\EACoverter\bin\Release\PdfSharp.Charting.dll
+H:\EA\EAConverter\EACoverter\bin\Release\PdfSharp.dll

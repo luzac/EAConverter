@@ -12,7 +12,7 @@ namespace EACoverter {
             //Document document = CreateDocument();
             Document document = CreateDocument(preds);
             document.UseCmykColor = true;
-            const bool unicode = false;
+            const bool unicode = true;
             const PdfFontEmbedding embedding = PdfFontEmbedding.Always;
             PdfDocumentRenderer pdfRenderer = new PdfDocumentRenderer(unicode, embedding);
             pdfRenderer.Document = document;
@@ -29,12 +29,16 @@ namespace EACoverter {
                 return result;
             }
 
+            result.Add("RAIM预测不可靠航段:");
+            if(predsEx.Count == 0)
+                result.Add("NONE");
             predsEx.ForEach(pred => {
                 result.AddRange(pred.Content);
                 result.Add("");
             });
-
-            result.Add("------------------------------------------------------------------\r\n");
+            result.Add("\r\n");
+            result.Add("------------------------------------------------------------------");
+            result.Add("\r\n");
 
             //if (predsNormal.Count != 0) {
             //    int maxContentSize = isAirport ? 5 : 6;
@@ -55,6 +59,7 @@ namespace EACoverter {
             //}
 
             if (predsNormal.Count != 0) {
+                result.Add("RAIM预测可靠航段:");
                 int maxContentSize = isAirport ? 5 : 6;
                 string prefixName = isAirport ? "AIRPORT" : "ENROUT";
                 var firstCompletePrediction = predsNormal.FirstOrDefault(pred => pred.Content.Count >= maxContentSize);
@@ -92,6 +97,7 @@ namespace EACoverter {
             Document document = new Document();
             Section section = document.AddSection();
             Paragraph paragraph = section.AddParagraph();
+            paragraph.Format.Font = new Font("微软雅黑");
             paragraph.Format.Font.Color = Color.FromCmyk(100, 30, 20, 50);
 
             var result = GenerateBriefContents(isAirport, predsEx, predsNormal);
@@ -100,7 +106,7 @@ namespace EACoverter {
             });
 
             document.UseCmykColor = true;
-            const bool unicode = false;
+            const bool unicode = true;
             const PdfFontEmbedding embedding = PdfFontEmbedding.Always;
             PdfDocumentRenderer pdfRenderer = new PdfDocumentRenderer(unicode, embedding);
             pdfRenderer.Document = document;
@@ -110,19 +116,20 @@ namespace EACoverter {
             Console.WriteLine(string.Format("{0}.pdf is generated!", targetFileName));
         }
 
-        static Document CreateDocument() {
-            Document document = new Document();
-            Section section = document.AddSection();
-            Paragraph paragraph = section.AddParagraph();
-            paragraph.Format.Font.Color = Color.FromCmyk(100, 30, 20, 50);
-            paragraph.AddFormattedText("Hello, EA Manager!", TextFormat.Bold);
-            return document;
-        }
+        //static Document CreateDocument() {
+        //    Document document = new Document();
+        //    Section section = document.AddSection();
+        //    Paragraph paragraph = section.AddParagraph();
+        //    paragraph.Format.Font.Color = Color.FromCmyk(100, 30, 20, 50);
+        //    paragraph.AddFormattedText("Hello, EA Manager!", TextFormat.Bold);
+        //    return document;
+        //}
 
         static Document CreateDocument(List<Prediction> preds) {
             Document document = new Document();
-            Section section = document.AddSection();
+            Section section = document.AddSection();            
             Paragraph paragraph = section.AddParagraph();
+            paragraph.Format.Font = new Font("微软雅黑");
             paragraph.Format.Font.Color = Color.FromCmyk(100, 30, 20, 50);
             preds.ForEach(pred => {
                 pred.Content.ForEach(singleContent => {

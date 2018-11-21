@@ -10,3 +10,15 @@ H:\EAConverter\EACoverter\EACoverter\bin\Debug\PdfSharp.Charting.dll
 H:\EAConverter\EACoverter\EACoverter\bin\Debug\PdfSharp.dll
 H:\EAConverter\EACoverter\EACoverter\bin\Debug\LitJson.dll
 H:\EAConverter\EACoverter\EACoverter\obj\Debug\EACoverter.csproj.CoreCompileInputs.cache
+H:\EA\EAConverter\EACoverter\bin\Debug\EACoverter.exe.config
+H:\EA\EAConverter\EACoverter\obj\Debug\EACoverter.exe
+H:\EA\EAConverter\EACoverter\obj\Debug\EACoverter.pdb
+H:\EA\EAConverter\EACoverter\bin\Debug\EACoverter.exe
+H:\EA\EAConverter\EACoverter\bin\Debug\EACoverter.pdb
+H:\EA\EAConverter\EACoverter\bin\Debug\LitJson.dll
+H:\EA\EAConverter\EACoverter\bin\Debug\MigraDoc.DocumentObjectModel.dll
+H:\EA\EAConverter\EACoverter\bin\Debug\MigraDoc.Rendering.dll
+H:\EA\EAConverter\EACoverter\bin\Debug\MigraDoc.RtfRendering.dll
+H:\EA\EAConverter\EACoverter\bin\Debug\PdfSharp.Charting.dll
+H:\EA\EAConverter\EACoverter\bin\Debug\PdfSharp.dll
+H:\EA\EAConverter\EACoverter\obj\Debug\EACoverter.csprojResolveAssemblyReference.cache
