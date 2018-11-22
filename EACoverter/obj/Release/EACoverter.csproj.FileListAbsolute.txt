@@ -21,3 +21,4 @@ H:\EA\EAConverter\EACoverter\bin\Release\MigraDoc.Rendering.dll
 H:\EA\EAConverter\EACoverter\bin\Release\MigraDoc.RtfRendering.dll
 H:\EA\EAConverter\EACoverter\bin\Release\PdfSharp.Charting.dll
 H:\EA\EAConverter\EACoverter\bin\Release\PdfSharp.dll
+H:\EA\EAConverter\EACoverter\obj\Release\EACoverter.csprojResolveAssemblyReference.cache

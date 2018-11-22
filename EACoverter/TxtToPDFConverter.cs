@@ -12,7 +12,7 @@ namespace EACoverter {
             //Document document = CreateDocument();
             Document document = CreateDocument(preds);
             document.UseCmykColor = true;
-            const bool unicode = true;
+            const bool unicode = false;
             const PdfFontEmbedding embedding = PdfFontEmbedding.Always;
             PdfDocumentRenderer pdfRenderer = new PdfDocumentRenderer(unicode, embedding);
             pdfRenderer.Document = document;
@@ -29,7 +29,7 @@ namespace EACoverter {
                 return result;
             }
 
-            result.Add("RAIM预测不可靠航段:");
+            result.Add("RAIM PREDICTED UNAVAILABLE ENROUT:");
             if(predsEx.Count == 0)
                 result.Add("NONE");
             predsEx.ForEach(pred => {
@@ -59,7 +59,7 @@ namespace EACoverter {
             //}
 
             if (predsNormal.Count != 0) {
-                result.Add("RAIM预测可靠航段:");
+                result.Add("RAIM PREDICTED AVAILABLE ENROUT:");
                 int maxContentSize = isAirport ? 5 : 6;
                 string prefixName = isAirport ? "AIRPORT" : "ENROUT";
                 var firstCompletePrediction = predsNormal.FirstOrDefault(pred => pred.Content.Count >= maxContentSize);
@@ -97,7 +97,7 @@ namespace EACoverter {
             Document document = new Document();
             Section section = document.AddSection();
             Paragraph paragraph = section.AddParagraph();
-            paragraph.Format.Font = new Font("微软雅黑");
+            //paragraph.Format.Font = new Font("微软雅黑");
             paragraph.Format.Font.Color = Color.FromCmyk(100, 30, 20, 50);
 
             var result = GenerateBriefContents(isAirport, predsEx, predsNormal);
@@ -106,7 +106,7 @@ namespace EACoverter {
             });
 
             document.UseCmykColor = true;
-            const bool unicode = true;
+            const bool unicode = false;
             const PdfFontEmbedding embedding = PdfFontEmbedding.Always;
             PdfDocumentRenderer pdfRenderer = new PdfDocumentRenderer(unicode, embedding);
             pdfRenderer.Document = document;
@@ -129,7 +129,7 @@ namespace EACoverter {
             Document document = new Document();
             Section section = document.AddSection();            
             Paragraph paragraph = section.AddParagraph();
-            paragraph.Format.Font = new Font("微软雅黑");
+            //paragraph.Format.Font = new Font("微软雅黑");
             paragraph.Format.Font.Color = Color.FromCmyk(100, 30, 20, 50);
             preds.ForEach(pred => {
                 pred.Content.ForEach(singleContent => {
